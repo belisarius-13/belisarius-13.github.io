@@ -1,0 +1,418 @@
+/* =========================================================
+   BELISARIUS13 // VISUAL SYSTEM
+   ========================================================= */
+
+:root {
+  --b13-bg: #0b0b10;
+  --b13-bg-soft: #111119;
+  --b13-panel: rgba(23, 20, 32, 0.78);
+  --b13-panel-strong: #171420;
+
+  --b13-purple: #8b5cf6;
+  --b13-purple-bright: #a78bfa;
+  --b13-purple-dark: #4c1d95;
+
+  --b13-gold: #c7a86b;
+  --b13-text: #f4f4f5;
+  --b13-muted: #a1a1aa;
+  --b13-border: rgba(167, 139, 250, 0.16);
+
+  --b13-glow: 0 0 40px rgba(139, 92, 246, 0.13);
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--b13-bg);
+  --md-default-fg-color: var(--b13-text);
+
+  --md-primary-fg-color: #171420;
+  --md-accent-fg-color: var(--b13-purple-bright);
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(91, 33, 182, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(139, 92, 246, 0.07),
+      transparent 30%
+    ),
+    var(--b13-bg);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.md-header {
+  background: rgba(11, 11, 16, 0.92);
+  border-bottom: 1px solid var(--b13-border);
+  backdrop-filter: blur(14px);
+}
+
+.md-tabs {
+  background: rgba(11, 11, 16, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.md-header__title {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   HOMEPAGE
+   ========================================================= */
+
+.b13-home {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.b13-kicker {
+  color: var(--b13-purple-bright);
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.b13-hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 570px;
+
+  display: flex;
+  align-items: center;
+
+  margin: 1.5rem 0 3rem;
+  padding: 5rem 4rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.10),
+      rgba(17, 17, 25, 0.75) 42%,
+      rgba(199, 168, 107, 0.04)
+    );
+
+  box-shadow: var(--b13-glow);
+}
+
+.b13-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.035) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+
+  mask-image:
+    linear-gradient(to bottom, black, transparent 90%);
+
+  pointer-events: none;
+}
+
+.b13-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.b13-name {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 850;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.b13-role {
+  margin-top: 1rem;
+
+  color: var(--b13-gold);
+
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.b13-intro {
+  max-width: 700px;
+
+  margin-top: 1.75rem;
+
+  color: var(--b13-muted);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.b13-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+
+  margin-top: 2rem;
+}
+
+.b13-button {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.8rem 1.25rem;
+
+  border: 1px solid var(--b13-purple);
+  border-radius: 10px;
+
+  color: white !important;
+  background: rgba(139, 92, 246, 0.12);
+
+  font-weight: 700;
+  text-decoration: none !important;
+
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.b13-button:hover {
+  transform: translateY(-2px);
+
+  background: rgba(139, 92, 246, 0.25);
+
+  box-shadow:
+    0 0 25px rgba(139, 92, 246, 0.2);
+}
+
+.b13-button-secondary {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.b13-section {
+  margin: 5rem 0;
+}
+
+.b13-section-heading {
+  margin-bottom: 0.7rem;
+
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 750;
+}
+
+.b13-section-intro {
+  max-width: 760px;
+
+  margin-bottom: 2rem;
+
+  color: var(--b13-muted);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.b13-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+.b13-card {
+  padding: 1.6rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 24, 39, 0.78),
+      rgba(13, 13, 19, 0.88)
+    );
+
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.b13-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(167, 139, 250, 0.4);
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.b13-card-label {
+  margin-bottom: 0.8rem;
+
+  color: var(--b13-purple-bright);
+
+  font-family: monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.b13-card h3 {
+  margin: 0 0 0.7rem;
+
+  color: white;
+}
+
+.b13-card p {
+  margin: 0;
+
+  color: var(--b13-muted);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PURPLE TEAM METHOD
+   ========================================================= */
+
+.b13-method {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+
+  margin-top: 2rem;
+}
+
+.b13-method span {
+  padding: 0.55rem 0.8rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 8px;
+
+  color: #ddd6fe;
+  background: rgba(139, 92, 246, 0.06);
+
+  font-family: monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.b13-arrow {
+  border: none !important;
+  background: transparent !important;
+  color: var(--b13-gold) !important;
+}
+
+
+/* =========================================================
+   CAMPAIGN CARD
+   ========================================================= */
+
+.b13-campaign {
+  padding: 2rem;
+
+  border-left: 3px solid var(--b13-purple);
+  border-radius: 0 18px 18px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0.12),
+      rgba(17, 17, 25, 0.7)
+    );
+}
+
+.b13-status {
+  display: inline-block;
+
+  margin-top: 1rem;
+  padding: 0.3rem 0.6rem;
+
+  border: 1px solid rgba(199, 168, 107, 0.35);
+  border-radius: 6px;
+
+  color: var(--b13-gold);
+
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .b13-hero {
+    min-height: auto;
+
+    padding: 3rem 1.5rem;
+
+    border-radius: 18px;
+  }
+
+  .b13-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-method {
+    flex-direction: column;
+  }
+
+  .b13-arrow {
+    display: none;
+  }
+}
