@@ -3131,3 +3131,518 @@ body:has(.b13-home) .b13-home {
   }
 
 }
+/* =========================================================
+   CHECKPOINT 00.6C // PURPLE TEAM LAB
+   ========================================================= */
+
+
+/* MISSION */
+
+.b13-lab-mission-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-lab-mission-card {
+  padding: 1.4rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(23, 20, 32, 0.72),
+      rgba(8, 8, 13, 0.95)
+    );
+}
+
+
+.b13-lab-mission-card > span {
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-lab-mission-card > strong {
+  display: block;
+
+  margin-top: 0.8rem;
+
+  color: white;
+
+  font-size: 0.75rem;
+}
+
+
+.b13-lab-mission-card p {
+  color: var(--b13-muted);
+
+  font-size: 0.65rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+   ========================================================= */
+
+.b13-lab-architecture {
+  padding: 2rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(139, 92, 246, 0.08),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(15, 13, 23, 0.9),
+      rgba(7, 7, 11, 0.97)
+    );
+}
+
+
+.b13-lab-node {
+  position: relative;
+
+  padding: 1.3rem;
+
+  border: 1px solid rgba(167, 139, 250, 0.17);
+  border-radius: 14px;
+
+  background:
+    rgba(12, 11, 18, 0.78);
+}
+
+
+.b13-lab-host {
+  max-width: 500px;
+  margin: 0 auto;
+
+  border-color:
+    rgba(199, 168, 107, 0.28);
+}
+
+
+.b13-lab-red {
+  border-color:
+    rgba(248, 113, 113, 0.20);
+}
+
+
+.b13-lab-endpoint {
+  border-color:
+    rgba(167, 139, 250, 0.30);
+}
+
+
+.b13-lab-azure {
+  border-color:
+    rgba(96, 165, 250, 0.28);
+}
+
+
+.b13-lab-node-head {
+  display: flex;
+  justify-content: space-between;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-lab-node-head span {
+  color: var(--b13-purple-bright);
+}
+
+
+.b13-lab-node-head strong {
+  color: var(--b13-gold);
+}
+
+
+.b13-lab-node h3 {
+  margin: 0.9rem 0 0.5rem;
+
+  color: white;
+}
+
+
+.b13-lab-node p {
+  margin: 0;
+
+  color: var(--b13-muted);
+
+  font-size: 0.65rem;
+  line-height: 1.65;
+}
+
+
+.b13-lab-flow {
+  margin: 1rem 0;
+
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.55rem;
+  font-weight: 700;
+
+  text-align: center;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-lab-stage-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+.b13-lab-telemetry-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 0.8rem;
+}
+
+
+.b13-lab-cloud {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+/* STATUS */
+
+.b13-lab-status {
+  display: inline-block;
+
+  margin-top: 1rem;
+  padding: 0.28rem 0.48rem;
+
+  border-radius: 5px;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.46rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+
+.b13-lab-status.ready {
+  border:
+    1px solid rgba(134, 239, 172, 0.2);
+
+  color: #86efac;
+
+  background:
+    rgba(134, 239, 172, 0.035);
+}
+
+
+.b13-lab-status.integration {
+  border:
+    1px solid rgba(167, 139, 250, 0.22);
+
+  color: var(--b13-purple-bright);
+
+  background:
+    rgba(139, 92, 246, 0.04);
+}
+
+
+.b13-lab-status.planned {
+  border:
+    1px solid rgba(199, 168, 107, 0.22);
+
+  color: var(--b13-gold);
+
+  background:
+    rgba(199, 168, 107, 0.035);
+}
+
+
+/* =========================================================
+   TELEMETRY MATRIX
+   ========================================================= */
+
+.b13-telemetry-matrix {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-telemetry-card {
+  min-height: 220px;
+
+  padding: 1.5rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(23, 20, 32, 0.68),
+      rgba(8, 8, 13, 0.94)
+    );
+}
+
+
+.b13-telemetry-code {
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.12em;
+}
+
+
+.b13-telemetry-card h3 {
+  margin-top: 1rem;
+
+  color: white;
+}
+
+
+.b13-telemetry-card p {
+  color: var(--b13-muted);
+
+  font-size: 0.68rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+   ========================================================= */
+
+.b13-lab-principles {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-lab-principles > div {
+  padding: 1.3rem;
+
+  border-top:
+    1px solid rgba(167, 139, 250, 0.25);
+}
+
+
+.b13-lab-principles span {
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.52rem;
+}
+
+
+.b13-lab-principles h3 {
+  color: white;
+}
+
+
+.b13-lab-principles p {
+  color: var(--b13-muted);
+
+  font-size: 0.65rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CAMPAIGN INTEGRATION
+   ========================================================= */
+
+.b13-lab-integration {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  gap: 3rem;
+
+  padding: 2rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(139, 92, 246, 0.07),
+      rgba(8, 8, 13, 0.94)
+    );
+}
+
+
+.b13-lab-integration h2 {
+  color: white;
+}
+
+
+.b13-lab-integration p {
+  max-width: 700px;
+
+  color: var(--b13-muted);
+
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+
+.b13-lab-integration-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 0.75rem;
+}
+
+
+.b13-lab-integration-actions a {
+  display: flex;
+  justify-content: space-between;
+
+  min-width: 210px;
+
+  padding: 0.75rem 0.9rem;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.18);
+
+  border-radius: 8px;
+
+  color:
+    var(--b13-purple-bright) !important;
+
+  background:
+    rgba(139, 92, 246, 0.035);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.52rem;
+  font-weight: 800;
+
+  text-decoration: none !important;
+}
+
+
+.b13-lab-integration-actions a strong {
+  color: var(--b13-gold);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+  .b13-lab-mission-grid,
+  .b13-lab-principles {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .b13-lab-telemetry-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+  .b13-lab-stage-grid,
+  .b13-telemetry-matrix {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-lab-integration {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+  .b13-lab-mission-grid,
+  .b13-lab-principles,
+  .b13-lab-telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-lab-architecture {
+    padding: 1rem;
+  }
+
+}
