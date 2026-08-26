@@ -416,3 +416,489 @@ body {
     display: none;
   }
 }
+
+
+/* =========================================================
+   B13 // BRAND IDENTITY
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HEADER MONOGRAM
+   --------------------------------------------------------- */
+
+.md-header__button.md-logo {
+  display: grid;
+  place-items: center;
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  margin-right: 0.5rem;
+  padding: 0;
+
+  border: 1px solid rgba(167, 139, 250, 0.32);
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(139, 92, 246, 0.18),
+      rgba(17, 17, 25, 0.9)
+    );
+
+  box-shadow:
+    inset 0 0 18px rgba(139, 92, 246, 0.08);
+}
+
+.md-header__button.md-logo svg {
+  display: none;
+}
+
+.md-header__button.md-logo::after {
+  content: "B13";
+
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.md-header__title::after {
+  content: " // PURPLE TEAM SECURITY LAB";
+
+  margin-left: 0.55rem;
+
+  color: var(--b13-muted);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+
+/* ---------------------------------------------------------
+   HERO GRID
+   --------------------------------------------------------- */
+
+.b13-hero {
+  display: block;
+
+  min-height: auto;
+
+  padding: 0;
+}
+
+.b13-hero-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(300px, 0.7fr);
+
+  align-items: center;
+
+  gap: 4rem;
+
+  min-height: 570px;
+
+  padding: 4.5rem;
+}
+
+.b13-hero-content {
+  max-width: none;
+}
+
+
+/* ---------------------------------------------------------
+   B13 TELEMETRY PANEL
+   --------------------------------------------------------- */
+
+.b13-hero-panel {
+  position: relative;
+  overflow: hidden;
+
+  padding: 2rem;
+
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 21, 37, 0.9),
+      rgba(10, 10, 15, 0.94)
+    );
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35),
+    inset 0 0 40px rgba(139, 92, 246, 0.045);
+}
+
+.b13-hero-panel::before {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  top: -120px;
+  right: -90px;
+
+  border: 1px solid rgba(199, 168, 107, 0.14);
+
+  transform: rotate(45deg);
+
+  pointer-events: none;
+}
+
+.b13-hero-panel::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      transparent 97%,
+      rgba(167, 139, 250, 0.04) 100%
+    );
+
+  background-size: 100% 5px;
+
+  pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   B13 INSIGNIA
+   --------------------------------------------------------- */
+
+.b13-insignia {
+  position: relative;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  width: 108px;
+  height: 108px;
+
+  margin-bottom: 1.8rem;
+
+  border: 1px solid rgba(167, 139, 250, 0.55);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(139, 92, 246, 0.19),
+      rgba(13, 13, 19, 0.92) 70%
+    );
+
+  clip-path:
+    polygon(
+      30% 0,
+      70% 0,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0 70%,
+      0 30%
+    );
+
+  box-shadow:
+    0 0 45px rgba(139, 92, 246, 0.16);
+}
+
+.b13-insignia span {
+  color: white;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.b13-insignia strong {
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   PANEL BRANDING
+   --------------------------------------------------------- */
+
+.b13-panel-title {
+  color: white;
+
+  font-size: 1.25rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+.b13-panel-subtitle {
+  margin-top: 0.35rem;
+
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.64rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.b13-panel-divider {
+  height: 1px;
+
+  margin: 1.4rem 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(167, 139, 250, 0.4),
+      rgba(167, 139, 250, 0.02)
+    );
+}
+
+
+/* ---------------------------------------------------------
+   STATUS TELEMETRY
+   --------------------------------------------------------- */
+
+.b13-status-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+.b13-status-grid div {
+  padding: 0.8rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+.b13-status-grid span {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: var(--b13-muted);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.1em;
+}
+
+.b13-status-grid strong {
+  color: #ddd6fe;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* ---------------------------------------------------------
+   TERMINAL
+   --------------------------------------------------------- */
+
+.b13-terminal {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+
+  margin-top: 1.2rem;
+  padding: 1rem;
+
+  border-left: 2px solid var(--b13-purple);
+
+  background:
+    rgba(0, 0, 0, 0.28);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.66rem;
+}
+
+.b13-terminal-command {
+  color: var(--b13-gold);
+}
+
+.b13-terminal-output {
+  color: var(--b13-muted);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE B13 HERO
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 950px) {
+
+  .b13-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    padding: 3rem 2rem;
+  }
+
+  .b13-hero-panel {
+    max-width: 520px;
+  }
+
+  .md-header__title::after {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .b13-hero-grid {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .b13-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-insignia {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
+/* =========================================================
+   HEADER ALIGNMENT FIX
+   ========================================================= */
+
+.md-header__title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.md-header__title {
+  display: flex;
+  align-items: center;
+  min-height: 2.4rem;
+}
+
+.md-tabs__list {
+  align-items: center;
+}
+
+.md-tabs__item {
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   B13 ARTWORK
+   ========================================================= */
+
+.b13-art-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 1.4rem;
+  padding: 0.4rem;
+
+  border: 1px solid rgba(167, 139, 250, 0.16);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.015),
+      rgba(139, 92, 246, 0.03)
+    );
+}
+
+.b13-artwork {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+
+  filter:
+    drop-shadow(0 0 30px rgba(139, 92, 246, 0.12));
+}
+
+/* Optional use later if needed elsewhere */
+.b13-insignia-img {
+  width: 96px;
+  height: 96px;
+  display: block;
+}
+
+@media screen and (max-width: 950px) {
+  .b13-artwork {
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .b13-artwork {
+    max-width: 240px;
+  }
+}

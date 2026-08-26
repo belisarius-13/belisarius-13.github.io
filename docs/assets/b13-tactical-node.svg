@@ -1,0 +1,98 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(450 450) rotate(90) scale(280)">
+      <stop stop-color="#8B5CF6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="lineGrad" x1="120" y1="120" x2="780" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#4C1D95"/>
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="320" y1="300" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E5C992"/>
+      <stop offset="1" stop-color="#C7A86B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background glow -->
+  <circle cx="450" cy="450" r="250" fill="url(#coreGlow)"/>
+
+  <!-- grid -->
+  <g opacity="0.12" stroke="#A78BFA">
+    <path d="M120 120H780"/>
+    <path d="M120 220H780"/>
+    <path d="M120 320H780"/>
+    <path d="M120 420H780"/>
+    <path d="M120 520H780"/>
+    <path d="M120 620H780"/>
+    <path d="M120 720H780"/>
+
+    <path d="M120 120V780"/>
+    <path d="M220 120V780"/>
+    <path d="M320 120V780"/>
+    <path d="M420 120V780"/>
+    <path d="M520 120V780"/>
+    <path d="M620 120V780"/>
+    <path d="M720 120V780"/>
+  </g>
+
+  <!-- geometry -->
+  <circle cx="450" cy="450" r="220" stroke="url(#lineGrad)" stroke-width="3" opacity="0.4"/>
+  <circle cx="450" cy="450" r="170" stroke="#C7A86B" stroke-width="2" opacity="0.35"/>
+  <circle cx="450" cy="450" r="110" stroke="#A78BFA" stroke-width="2" opacity="0.4"/>
+
+  <path d="M450 180V280" stroke="#A78BFA" stroke-width="3" opacity="0.45"/>
+  <path d="M450 620V720" stroke="#A78BFA" stroke-width="3" opacity="0.45"/>
+  <path d="M180 450H280" stroke="#A78BFA" stroke-width="3" opacity="0.45"/>
+  <path d="M620 450H720" stroke="#A78BFA" stroke-width="3" opacity="0.45"/>
+
+  <path d="M640 200L740 300" stroke="url(#goldGrad)" stroke-width="2" opacity="0.35"/>
+  <path d="M160 620L260 720" stroke="url(#goldGrad)" stroke-width="2" opacity="0.25"/>
+
+  <!-- center octagon -->
+  <path d="M380 300H520L600 380V520L520 600H380L300 520V380L380 300Z"
+        fill="#12111A" stroke="url(#lineGrad)" stroke-width="6"/>
+
+  <!-- center emblem -->
+  <text x="365" y="480"
+        fill="white"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="110"
+        font-weight="800"
+        letter-spacing="-4">
+    B
+  </text>
+
+  <text x="480" y="480"
+        fill="url(#goldGrad)"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="78"
+        font-weight="800"
+        letter-spacing="-3">
+    13
+  </text>
+
+  <!-- caption -->
+  <text x="450" y="655"
+        text-anchor="middle"
+        fill="#A78BFA"
+        font-family="Consolas, monospace"
+        font-size="20"
+        font-weight="700"
+        letter-spacing="6">
+    BELISARIUS13
+  </text>
+
+  <text x="450" y="685"
+        text-anchor="middle"
+        fill="#C7A86B"
+        font-family="Consolas, monospace"
+        font-size="13"
+        font-weight="700"
+        letter-spacing="4">
+    PURPLE TEAM SECURITY LAB
+  </text>
+</svg>

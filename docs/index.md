@@ -8,6 +8,8 @@ hide:
 
 <section class="b13-hero">
 
+<div class="b13-hero-grid">
+
 <div class="b13-hero-content">
 
 <div class="b13-kicker">
@@ -37,6 +39,67 @@ Explore Projects
 <a href="lab/" class="b13-button b13-button-secondary">
 Enter the Lab
 </a>
+
+</div>
+
+</div>
+
+
+<div class="b13-hero-panel">
+
+<div class="b13-art-frame">
+  <img
+    src="assets/b13-tactical-node.svg"
+    alt="BELISARIUS13 tactical insignia artwork"
+    class="b13-artwork"
+  />
+</div>
+
+<div class="b13-panel-title">
+BELISARIUS13
+</div>
+
+<div class="b13-panel-subtitle">
+PURPLE TEAM SECURITY LAB
+</div>
+
+<div class="b13-panel-divider"></div>
+
+<div class="b13-status-grid">
+
+<div>
+<span>MODE</span>
+<strong>PURPLE TEAM</strong>
+</div>
+
+<div>
+<span>FOCUS</span>
+<strong>VALIDATION</strong>
+</div>
+
+<div>
+<span>TELEMETRY</span>
+<strong>ONLINE</strong>
+</div>
+
+<div>
+<span>CAMPAIGN</span>
+<strong>00 // ACTIVE</strong>
+</div>
+
+</div>
+
+<div class="b13-terminal">
+
+<span class="b13-terminal-command">
+$ validate --controls
+</span>
+
+<span class="b13-terminal-output">
+attack → detect → harden → retest
+</span>
+
+</div>
 
 </div>
 

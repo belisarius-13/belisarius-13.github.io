@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151320"/>
+      <stop offset="1" stop-color="#0B0B10"/>
+    </linearGradient>
+
+    <linearGradient id="stroke1" x1="96" y1="96" x2="416" y2="416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+
+    <linearGradient id="gold" x1="240" y1="170" x2="320" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E5C992"/>
+      <stop offset="1" stop-color="#C7A86B"/>
+    </linearGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- outer glow -->
+  <circle cx="256" cy="256" r="170" fill="#8B5CF6" opacity="0.08" filter="url(#glow)"/>
+
+  <!-- octagon -->
+  <path d="M176 72H336L440 176V336L336 440H176L72 336V176L176 72Z"
+        fill="url(#bg)" stroke="url(#stroke1)" stroke-width="8"/>
+
+  <!-- inner ring -->
+  <circle cx="256" cy="256" r="120" stroke="#A78BFA" stroke-opacity="0.28" stroke-width="2"/>
+  <circle cx="256" cy="256" r="90" stroke="#C7A86B" stroke-opacity="0.22" stroke-width="2"/>
+
+  <!-- tech lines -->
+  <path d="M256 112V156" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M256 356V400" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M112 256H156" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M356 256H400" stroke="#A78BFA" stroke-opacity="0.5" stroke-width="3"/>
+
+  <!-- diagonal accent -->
+  <path d="M358 126L392 160" stroke="#C7A86B" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M120 352L154 386" stroke="#C7A86B" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- B13 -->
+  <text x="184" y="282"
+        fill="white"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="78"
+        font-weight="800"
+        letter-spacing="-2">
+    B
+  </text>
+
+  <text x="266" y="282"
+        fill="url(#gold)"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="56"
+        font-weight="800"
+        letter-spacing="-2">
+    13
+  </text>
+</svg>
