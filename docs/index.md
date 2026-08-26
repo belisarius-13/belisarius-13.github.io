@@ -2,6 +2,7 @@
 hide:
   - navigation
   - toc
+  - footer
 ---
 
 <div class="b13-home">
@@ -508,3 +509,227 @@ EXPLORE CLOUD LABS <strong>→</strong>
 
 </section>
 
+<section class="b13-section b13-campaign-v1">
+
+<div class="b13-campaign-layout">
+
+
+<div class="b13-campaign-main">
+
+<div class="b13-kicker">
+B13 // CAMPAIGN-00
+</div>
+
+<div class="b13-campaign-title-row">
+
+<div>
+
+<h2 class="b13-section-heading">
+Secure Purple Team Portfolio Platform
+</h2>
+
+<p class="b13-section-intro">
+Building the infrastructure behind BELISARIUS13 as a security engineering
+project rather than treating the portfolio as a simple static website.
+</p>
+
+</div>
+
+<div class="b13-campaign-badge">
+<span>STATUS</span>
+<strong>ACTIVE</strong>
+</div>
+
+</div>
+
+
+<div class="b13-campaign-objective">
+
+<span>OBJECTIVE</span>
+
+<p>
+Design, deploy and harden a reproducible cybersecurity portfolio platform
+using secure source control, CI/CD, DNS, TLS and infrastructure security
+principles.
+</p>
+
+</div>
+
+
+<div class="b13-campaign-stack">
+
+<span>Git</span>
+<span>GitHub</span>
+<span>GitHub Actions</span>
+<span>MkDocs</span>
+<span>Cloudflare</span>
+<span>DNSSEC</span>
+<span>TLS</span>
+<span>Python</span>
+
+</div>
+
+
+<a href="projects/" class="b13-campaign-action">
+VIEW CAMPAIGN DOCUMENTATION
+<strong>→</strong>
+</a>
+
+</div>
+
+
+
+<div class="b13-campaign-side">
+
+<div class="b13-campaign-side-heading">
+CAMPAIGN TELEMETRY
+</div>
+
+
+<div class="b13-campaign-metric">
+
+<span>CAMPAIGN</span>
+<strong>00</strong>
+
+</div>
+
+
+<div class="b13-campaign-metric">
+
+<span>PHASE</span>
+<strong>BUILD</strong>
+
+</div>
+
+
+<div class="b13-campaign-metric">
+
+<span>DEPLOYMENT</span>
+<strong class="b13-green">ONLINE</strong>
+
+</div>
+
+
+<div class="b13-campaign-metric">
+
+<span>PIPELINE</span>
+<strong class="b13-green">PASSING</strong>
+
+</div>
+
+
+<div class="b13-campaign-command">
+
+<span>$</span>
+<strong>git push origin main</strong>
+
+<small>
+build → validate → deploy
+</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+<section class="b13-section b13-closing-section">
+
+<div class="b13-closing-grid">
+
+
+<div class="b13-closing-copy">
+
+<div class="b13-kicker">
+BELISARIUS13 // SECURITY LAB
+</div>
+
+<h2>
+Build. Attack. Observe. Improve.
+</h2>
+
+<p>
+The lab documents practical security engineering across adversary
+emulation, detection engineering, incident response, network analysis
+and Azure security.
+</p>
+
+</div>
+
+
+<div class="b13-closing-actions">
+
+<a href="lab/" class="b13-closing-card">
+
+<span>01 // LAB</span>
+
+<strong>
+Explore the Purple Team Lab
+</strong>
+
+<small>
+Architecture, telemetry and tooling.
+</small>
+
+<div>→</div>
+
+</a>
+
+
+<a href="blog/" class="b13-closing-card">
+
+<span>02 // RESEARCH</span>
+
+<strong>
+Read Security Research
+</strong>
+
+<small>
+Technical notes, findings and lessons learned.
+</small>
+
+<div>→</div>
+
+</a>
+
+
+<a href="about/" class="b13-closing-card">
+
+<span>03 // OPERATOR</span>
+
+<strong>
+About Joseph Daniel
+</strong>
+
+<small>
+Background, focus and security engineering journey.
+</small>
+
+<div>→</div>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="b13-signoff">
+
+<div>
+<span class="b13-signoff-dot"></span>
+BELISARIUS13
+</div>
+
+<strong>
+Offense informs defense. Detection drives improvement.
+</strong>
+
+</div>
+
+</section>
