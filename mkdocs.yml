@@ -15,7 +15,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.top
     - navigation.footer
     - content.code.copy
     - search.suggest

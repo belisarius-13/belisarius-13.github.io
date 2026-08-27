@@ -6435,3 +6435,350 @@ body:has(.b13-home) .b13-home {
   }
 
 }
+
+
+/* =========================================================
+   CHECKPOINT 00.7A // HEADER + NAVIGATION POLISH
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HEADER SHELL
+   --------------------------------------------------------- */
+
+.md-header {
+  background:
+    rgba(8, 8, 13, 0.96);
+
+  border-bottom:
+    1px solid rgba(167, 139, 250, 0.12);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter:
+    blur(16px);
+
+  -webkit-backdrop-filter:
+    blur(16px);
+}
+
+
+.md-header__inner {
+  min-height: 3.6rem;
+}
+
+
+/* ---------------------------------------------------------
+   B13 BRAND LOCKUP
+   --------------------------------------------------------- */
+
+.md-header__button.md-logo {
+  flex: 0 0 auto;
+
+  width: 2.55rem;
+  height: 2.55rem;
+
+  margin-right: 0.75rem;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.35);
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(139, 92, 246, 0.17),
+      rgba(17, 17, 25, 0.94)
+    );
+
+  box-shadow:
+    inset 0 0 20px rgba(139, 92, 246, 0.07);
+}
+
+
+.md-header__button.md-logo::after {
+  content: "B13";
+
+  color:
+    var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.69rem;
+  font-weight: 900;
+
+  letter-spacing: -0.035em;
+}
+
+
+/*
+   Disable the older subtitle pseudo-element.
+   Keep the header deliberately clean.
+*/
+
+.md-header__title::after {
+  content: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   KEEP BELISARIUS13 VISIBLE WHILE SCROLLING
+   --------------------------------------------------------- */
+
+/*
+   Material normally swaps the site title for the current page title
+   while scrolling. For BELISARIUS13, the technical brand should
+   remain persistent.
+*/
+
+.md-header__topic:first-child {
+  position: static !important;
+
+  opacity: 1 !important;
+
+  transform:
+    none !important;
+}
+
+
+.md-header__topic:first-child .md-ellipsis {
+  color: #ffffff;
+
+  font-size: 0.92rem;
+  font-weight: 850;
+
+  letter-spacing: 0.08em;
+}
+
+
+.md-header__topic + .md-header__topic {
+  display: none !important;
+}
+
+
+.md-header__title {
+  margin-left: 0;
+
+  color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   TOP NAVIGATION BAR
+   --------------------------------------------------------- */
+
+.md-tabs {
+  background:
+    rgba(8, 8, 13, 0.94);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.045);
+}
+
+
+.md-tabs__inner {
+  min-height: 2.75rem;
+}
+
+
+.md-tabs__list {
+  display: flex;
+  align-items: center;
+
+  gap: 0.15rem;
+}
+
+
+.md-tabs__item {
+  height: auto;
+
+  padding: 0;
+}
+
+
+.md-tabs__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 2.75rem;
+
+  margin: 0;
+  padding: 0 0.75rem;
+
+  color:
+    rgba(244, 244, 245, 0.68);
+
+  font-size: 0.69rem;
+  font-weight: 650;
+
+  opacity: 1;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease;
+}
+
+
+.md-tabs__link:hover {
+  color: #ffffff;
+
+  background:
+    rgba(139, 92, 246, 0.045);
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE NAVIGATION TAB
+   --------------------------------------------------------- */
+
+.md-tabs__item--active .md-tabs__link {
+  color: #ffffff;
+
+  font-weight: 750;
+}
+
+
+.md-tabs__item--active .md-tabs__link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--b13-purple-bright),
+      var(--b13-gold)
+    );
+
+  border-radius:
+    2px 2px 0 0;
+}
+
+
+/* ---------------------------------------------------------
+   SEARCH
+   --------------------------------------------------------- */
+
+.md-search {
+  margin-left: auto;
+}
+
+
+.md-search__form {
+  border:
+    1px solid rgba(167, 139, 250, 0.10);
+
+  border-radius: 8px;
+
+  background:
+    rgba(0, 0, 0, 0.22);
+
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+
+.md-search__form:hover {
+  border-color:
+    rgba(167, 139, 250, 0.25);
+
+  background:
+    rgba(139, 92, 246, 0.035);
+}
+
+
+.md-search__input {
+  font-size: 0.72rem;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER BUTTONS
+   --------------------------------------------------------- */
+
+.md-header__button {
+  color:
+    rgba(244, 244, 245, 0.8);
+
+  transition:
+    color 150ms ease,
+    background 150ms ease;
+}
+
+
+.md-header__button:hover {
+  color:
+    var(--b13-purple-bright);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE NAVIGATION
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 959px) {
+
+  .md-header__inner {
+    min-height: 3.45rem;
+  }
+
+
+  .md-header__button.md-logo {
+    width: 2.35rem;
+    height: 2.35rem;
+
+    margin-right: 0.55rem;
+  }
+
+
+  .md-header__topic:first-child .md-ellipsis {
+    font-size: 0.78rem;
+
+    letter-spacing: 0.065em;
+  }
+
+
+  .md-search__form {
+    border: none;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL PHONE
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 480px) {
+
+  .md-header__topic:first-child .md-ellipsis {
+    font-size: 0.72rem;
+  }
+
+
+  .md-header__button.md-logo {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+
+  .md-header__button.md-logo::after {
+    font-size: 0.62rem;
+  }
+
+}
