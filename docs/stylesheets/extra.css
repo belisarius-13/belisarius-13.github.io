@@ -5615,3 +5615,823 @@ body:has(.b13-home) .b13-home {
   }
 
 }
+
+/* =========================================================
+   CHECKPOINT 00.6F // ABOUT + CONTACT
+   ========================================================= */
+
+
+/* =========================================================
+   ABOUT // IDENTITY
+   ========================================================= */
+
+.b13-about-identity {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.72fr)
+    minmax(0, 1.28fr);
+
+  gap: 3rem;
+
+  align-items: center;
+}
+
+
+.b13-about-portrait {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 520px;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(23, 20, 32, 0.8),
+      rgba(8, 8, 13, 0.96)
+    );
+}
+
+
+.b13-about-portrait img {
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+
+.b13-about-portrait::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(7, 7, 11, 0.92),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+.b13-about-portrait-status {
+  position: absolute;
+  z-index: 2;
+
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.2rem;
+
+  display: grid;
+
+  gap: 0.2rem;
+
+  padding: 1rem;
+
+  border-left:
+    2px solid var(--b13-purple);
+
+  background:
+    rgba(7, 7, 11, 0.72);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.b13-about-portrait-status span {
+  margin-top: 0.4rem;
+
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.46rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-about-portrait-status strong {
+  color: #ddd6fe;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.54rem;
+}
+
+
+.b13-about-intro h2 {
+  color: white;
+
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.08;
+}
+
+
+.b13-about-intro p {
+  color: var(--b13-muted);
+
+  line-height: 1.8;
+}
+
+
+.b13-about-cycle {
+  margin: 1.5rem 0;
+  padding: 1rem;
+
+  border-left:
+    2px solid var(--b13-gold);
+
+  color: var(--b13-gold);
+
+  background:
+    rgba(199, 168, 107, 0.025);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   IDENTITY MODEL
+   ========================================================= */
+
+.b13-identity-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-identity-card {
+  min-height: 260px;
+
+  padding: 1.5rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(23, 20, 32, 0.72),
+      rgba(8, 8, 13, 0.95)
+    );
+}
+
+
+.b13-identity-brand {
+  border-color:
+    rgba(199, 168, 107, 0.26);
+}
+
+
+.b13-identity-code {
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-identity-card h3 {
+  margin-top: 1.3rem;
+
+  color: white;
+}
+
+
+.b13-identity-brand h3 {
+  color: var(--b13-gold);
+}
+
+
+.b13-identity-card p {
+  color: var(--b13-muted);
+
+  font-size: 0.67rem;
+  line-height: 1.7;
+}
+
+
+.b13-identity-footer {
+  margin-top: 1.3rem;
+  padding-top: 0.8rem;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.05);
+
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.48rem;
+}
+
+
+/* =========================================================
+   ABOUT FOCUS
+   ========================================================= */
+
+.b13-about-focus-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-about-focus {
+  padding: 1.4rem;
+
+  border-top:
+    1px solid rgba(167, 139, 250, 0.26);
+}
+
+
+.b13-about-focus > span {
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.5rem;
+}
+
+
+.b13-about-focus h3 {
+  color: white;
+}
+
+
+.b13-about-focus p {
+  color: var(--b13-muted);
+
+  font-size: 0.65rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BELISARIUS BRAND PANEL
+   ========================================================= */
+
+.b13-about-bel {
+  display: grid;
+
+  grid-template-columns:
+    190px
+    minmax(0, 1fr);
+
+  gap: 2rem;
+
+  align-items: center;
+
+  padding: 2rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(139, 92, 246, 0.13),
+      transparent 25%
+    ),
+    linear-gradient(
+      110deg,
+      rgba(20, 17, 31, 0.85),
+      rgba(8, 8, 13, 0.96)
+    );
+}
+
+
+.b13-about-bel-mark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  min-height: 150px;
+
+  color: white;
+
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+
+.b13-about-bel-mark span {
+  color: var(--b13-gold);
+
+  font-size: 1.8rem;
+}
+
+
+.b13-about-bel h3 {
+  color: white;
+}
+
+
+.b13-about-bel p {
+  color: var(--b13-muted);
+
+  font-size: 0.68rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   ABOUT LINKS
+   ========================================================= */
+
+.b13-about-links {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  gap: 3rem;
+
+  padding: 2rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(139, 92, 246, 0.06),
+      rgba(8, 8, 13, 0.95)
+    );
+}
+
+
+.b13-about-links h2 {
+  color: white;
+}
+
+
+.b13-about-links p {
+  max-width: 680px;
+
+  color: var(--b13-muted);
+
+  font-size: 0.68rem;
+  line-height: 1.7;
+}
+
+
+.b13-about-link-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 0.65rem;
+}
+
+
+.b13-about-link-actions a {
+  display: flex;
+  justify-content: space-between;
+
+  min-width: 220px;
+
+  padding: 0.75rem 0.9rem;
+
+  border:
+    1px solid rgba(167, 139, 250, 0.18);
+
+  border-radius: 8px;
+
+  color:
+    var(--b13-purple-bright) !important;
+
+  background:
+    rgba(139, 92, 246, 0.035);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.52rem;
+  font-weight: 800;
+
+  text-decoration: none !important;
+}
+
+
+.b13-about-link-actions strong {
+  color: var(--b13-gold);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.b13-contact-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.7fr)
+    minmax(0, 1.3fr);
+
+  gap: 3rem;
+}
+
+
+.b13-contact-intro h2 {
+  color: white;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+.b13-contact-intro > p {
+  color: var(--b13-muted);
+
+  line-height: 1.75;
+}
+
+
+.b13-contact-note {
+  margin-top: 2rem;
+  padding: 1rem;
+
+  border-left:
+    2px solid var(--b13-gold);
+
+  background:
+    rgba(199, 168, 107, 0.025);
+}
+
+
+.b13-contact-note span {
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-contact-note p {
+  color: var(--b13-muted);
+
+  font-size: 0.62rem;
+  line-height: 1.65;
+}
+
+
+/* CHANNEL CARDS */
+
+.b13-contact-channel-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-contact-channel {
+  min-height: 220px;
+
+  padding: 1.4rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 15px;
+
+  color: inherit !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(23, 20, 32, 0.72),
+      rgba(8, 8, 13, 0.95)
+    );
+
+  text-decoration: none !important;
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease;
+}
+
+
+.b13-contact-channel-live:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(167, 139, 250, 0.44);
+}
+
+
+.b13-contact-channel-code {
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+.b13-contact-channel h3 {
+  margin-top: 1.2rem;
+
+  color: white;
+}
+
+
+.b13-contact-channel p {
+  color: var(--b13-muted);
+
+  font-size: 0.65rem;
+  line-height: 1.65;
+}
+
+
+.b13-contact-pending {
+  margin-top: 1.2rem;
+
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.48rem;
+}
+
+
+.b13-contact-live {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 1.2rem;
+
+  color: var(--b13-purple-bright);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.5rem;
+  font-weight: 800;
+}
+
+
+.b13-contact-live strong {
+  color: var(--b13-gold);
+}
+
+
+/* CONTACT TOPICS */
+
+.b13-contact-topic-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+
+.b13-contact-topic-grid > div {
+  padding: 1.3rem;
+
+  border-top:
+    1px solid rgba(167, 139, 250, 0.25);
+}
+
+
+.b13-contact-topic-grid span {
+  color: var(--b13-gold);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.5rem;
+}
+
+
+.b13-contact-topic-grid h3 {
+  color: white;
+}
+
+
+.b13-contact-topic-grid p {
+  color: var(--b13-muted);
+
+  font-size: 0.63rem;
+  line-height: 1.65;
+}
+
+
+/* CONTACT SECURITY */
+
+.b13-contact-security {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    220px;
+
+  gap: 2rem;
+
+  padding: 2rem;
+
+  border: 1px solid var(--b13-border);
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(139, 92, 246, 0.055),
+      rgba(8, 8, 13, 0.96)
+    );
+}
+
+
+.b13-contact-security h2 {
+  color: white;
+}
+
+
+.b13-contact-security p {
+  color: var(--b13-muted);
+
+  font-size: 0.68rem;
+  line-height: 1.7;
+}
+
+
+.b13-contact-security-state {
+  display: grid;
+  align-content: center;
+
+  gap: 0.25rem;
+
+  padding-left: 1.4rem;
+
+  border-left:
+    1px solid rgba(167, 139, 250, 0.15);
+}
+
+
+.b13-contact-security-state span {
+  margin-top: 0.7rem;
+
+  color: var(--b13-muted);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.45rem;
+}
+
+
+.b13-contact-security-state strong {
+  color: #ddd6fe;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.57rem;
+}
+
+
+.b13-red-text {
+  color: #fca5a5 !important;
+}
+
+
+/* =========================================================
+   00.6F // RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 950px) {
+
+  .b13-about-identity {
+    grid-template-columns:
+      minmax(260px, 0.65fr)
+      minmax(0, 1fr);
+  }
+
+  .b13-about-focus-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .b13-contact-topic-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .b13-about-identity,
+  .b13-about-links,
+  .b13-contact-layout,
+  .b13-contact-security {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-about-portrait {
+    max-width: 500px;
+  }
+
+  .b13-identity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-about-bel {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-contact-security-state {
+    padding-left: 0;
+    padding-top: 1.2rem;
+
+    border-left: none;
+
+    border-top:
+      1px solid rgba(167, 139, 250, 0.15);
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .b13-about-focus-grid,
+  .b13-contact-channel-grid,
+  .b13-contact-topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
