@@ -6,6 +6,8 @@ site_url: https://belisarius13.com
 theme:
   name: material
   language: en
+  favicon: assets/b13-insignia.svg
+  custom_dir: overrides
 
   palette:
     - scheme: slate

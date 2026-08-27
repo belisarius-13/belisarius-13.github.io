@@ -1,4 +1,6 @@
 ---
+title: Projects & Campaigns
+description: BELISARIUS13 Purple Team security engineering campaigns covering adversary emulation, detection engineering, DFIR, network security, web security and Azure.
 hide:
   - navigation
   - toc

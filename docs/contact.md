@@ -1,4 +1,6 @@
 ---
+title: Professional Contact
+description: Professional contact channels for Joseph Daniel and the BELISARIUS13 security lab for cybersecurity engineering, collaboration and professional networking.
 hide:
   - navigation
   - toc

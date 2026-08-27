@@ -1,4 +1,6 @@
 ---
+title: About Joseph Daniel
+description: Professional profile of Joseph Daniel, a Purple Team Security Engineer focused on adversary emulation, detection engineering, DFIR, threat hunting and Azure security.
 hide:
   - navigation
   - toc

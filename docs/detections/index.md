@@ -1,4 +1,6 @@
 ---
+title: Detection Engineering
+description: BELISARIUS13 detection engineering library for ATT&CK-aligned hypotheses, telemetry analysis, Sigma, Elastic, KQL, Suricata, testing and validation.
 hide:
   - navigation
   - toc

@@ -6987,3 +6987,73 @@ body:has(.b13-home) .b13-home {
   }
 
 }
+
+/* =========================================================
+   CHECKPOINT 00.7C // ACCESSIBILITY
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   KEYBOARD FOCUS
+   --------------------------------------------------------- */
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  summary,
+  [tabindex]
+):focus-visible {
+  outline:
+    2px solid var(--b13-gold);
+
+  outline-offset: 3px;
+
+  border-radius: 4px;
+}
+
+
+/* B13 interactive cards */
+
+.b13-button:focus-visible,
+.b13-closing-card:focus-visible,
+.b13-contact-channel-live:focus-visible,
+.b13-about-link-actions a:focus-visible,
+.b13-research-link-actions a:focus-visible,
+.b13-lab-integration-actions a:focus-visible {
+  outline:
+    2px solid var(--b13-purple-bright);
+
+  outline-offset: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   REDUCED MOTION
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+
+}

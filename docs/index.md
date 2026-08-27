@@ -1,4 +1,6 @@
 ---
+title: Joseph Daniel — Purple Team Security Engineer
+description: Purple Team security engineering portfolio by Joseph Daniel covering adversary emulation, detection engineering, DFIR, Azure security and technical security research.
 hide:
   - navigation
   - toc

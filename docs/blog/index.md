@@ -1,4 +1,6 @@
 ---
+title: Security Research & Field Notes
+description: Technical research and field notes from BELISARIUS13 covering Purple Team operations, detection engineering, DFIR, network analysis, Azure security and lab engineering.
 hide:
   - navigation
   - toc

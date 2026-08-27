@@ -1,4 +1,6 @@
 ---
+title: Purple Team Lab
+description: BELISARIUS13 controlled security lab for adversary emulation, endpoint and network telemetry, detection development, incident investigation and defensive validation.
 hide:
   - navigation
   - toc
