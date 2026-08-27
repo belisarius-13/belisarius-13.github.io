@@ -6782,3 +6782,208 @@ body:has(.b13-home) .b13-home {
   }
 
 }
+
+
+/* =========================================================
+   CHECKPOINT 00.7B // MOBILE RESPONSIVE CORRECTIONS
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+  /* -----------------------------------------
+     HOMEPAGE CANVAS
+     ----------------------------------------- */
+
+  body:has(.b13-home) .md-content__inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body:has(.b13-home) .b13-home {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .b13-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+
+  /* -----------------------------------------
+     HERO
+     ----------------------------------------- */
+
+  .b13-v1-grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+
+  .b13-v1-copy {
+    padding:
+      2.25rem
+      1.25rem
+      2rem;
+  }
+
+  .b13-v1-portrait-zone {
+    min-width: 0;
+    min-height: 360px;
+  }
+
+  .b13-portrait {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  .b13-v1-panel {
+    width: auto;
+    min-width: 0;
+
+    margin:
+      0
+      1rem
+      1rem;
+  }
+
+
+  /* -----------------------------------------
+     OPERATING MODEL
+     ----------------------------------------- */
+
+  .b13-ops-section {
+    padding: 1.35rem;
+    border-radius: 16px;
+  }
+
+  .b13-ops-heading {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .b13-ops-state {
+    width: 100%;
+  }
+
+  .b13-validation-flow {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+
+    margin-top: 1.5rem;
+  }
+
+  .b13-flow-connector {
+    display: none;
+  }
+
+  .b13-flow-step {
+    width: 100%;
+    min-width: 0;
+
+    padding: 1.1rem;
+  }
+
+  .b13-flow-step > strong {
+    font-size: 0.7rem;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .b13-flow-step > span {
+    font-size: 0.64rem;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .b13-loop-footer {
+    flex-wrap: wrap;
+  }
+
+
+  /* -----------------------------------------
+     CORE DISCIPLINES
+     ----------------------------------------- */
+
+  .b13-disciplines-header {
+    flex-direction: column;
+  }
+
+  .b13-discipline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-discipline-card {
+    min-height: auto;
+  }
+
+
+  /* -----------------------------------------
+     CAMPAIGN 00
+     ----------------------------------------- */
+
+  .b13-campaign-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .b13-campaign-main,
+  .b13-campaign-side {
+    padding: 1.35rem;
+  }
+
+  .b13-campaign-side {
+    border-left: none;
+
+    border-top:
+      1px solid rgba(167, 139, 250, 0.13);
+  }
+
+  .b13-campaign-title-row {
+    flex-direction: column;
+  }
+
+
+  /* -----------------------------------------
+     HOMEPAGE CLOSING
+     ----------------------------------------- */
+
+  .b13-closing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .b13-signoff {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+/* =========================================================
+   CHECKPOINT 00.7B // NARROW PHONE EDGE CASE
+   ========================================================= */
+
+@media screen and (max-width: 360px) {
+
+  .b13-v1-panel {
+    margin:
+      0
+      0.65rem
+      1rem;
+
+    padding: 1.25rem;
+  }
+
+  .b13-v1-panel .b13-status-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .b13-v1-panel .b13-status-grid strong {
+    white-space: normal;
+  }
+
+}
