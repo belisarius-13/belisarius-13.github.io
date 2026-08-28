@@ -7057,3 +7057,33 @@ body:has(.b13-home) .b13-home {
   }
 
 }
+
+
+/* =========================================================
+   B13 // HERO STATUS GRID OVERFLOW FIX
+   ========================================================= */
+
+.b13-v1-panel .b13-status-grid {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.b13-v1-panel .b13-status-grid > div {
+  min-width: 0;
+}
+
+.b13-v1-panel .b13-status-grid strong {
+  display: block;
+
+  max-width: 100%;
+
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+
+  line-height: 1.45;
+}
+
+.b13-v1-panel .b13-status-grid > div:nth-child(4) strong {
+  font-size: 0.54rem;
+  letter-spacing: 0.025em;
+}
