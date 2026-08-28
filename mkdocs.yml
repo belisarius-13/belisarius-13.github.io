@@ -27,6 +27,7 @@ nav:
 
   - Projects:
       - Overview: projects/index.md
+      - Campaign 00 — Secure Portfolio Platform: projects/campaign-00.md
 
   - Purple Team Lab:
       - Lab Overview: lab/index.md

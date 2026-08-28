@@ -98,8 +98,14 @@ engineering.
 
 
 <div class="b13-project-cycle">
-BUILD → VALIDATE → DEPLOY → HARDEN → DOCUMENT
+BUILD → VALIDATE → DEPLOY → HARDEN → DOCUMENT → COMPLETE
 </div>
+
+<p>
+<a href="campaign-00/" class="b13-button">
+View Campaign-00 →
+</a>
+</p>
 
 </div>
 
@@ -107,7 +113,7 @@ BUILD → VALIDATE → DEPLOY → HARDEN → DOCUMENT
 <div class="b13-project-featured-status">
 
 <span>STATUS</span>
-<strong>ACTIVE</strong>
+<strong class="b13-green">COMPLETE</strong>
 
 <span>CAMPAIGN</span>
 <strong>00</strong>
