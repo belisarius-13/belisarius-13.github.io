@@ -35,6 +35,10 @@ nav:
   - Detection Engineering:
       - Detection Library: detections/index.md
 
+  - Threat Intelligence:
+      - Intelligence Feed: intel/index.md
+      - Analyst Brief: intel/feed/latest.md
+
   - Research:
       - Blog: blog/index.md
 
@@ -61,6 +65,9 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/intel-dashboard.js
 
 extra:
   generator: false
