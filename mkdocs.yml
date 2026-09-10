@@ -65,6 +65,7 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/intel-trends.css
 
 extra_javascript:
   - javascripts/intel-dashboard.js
