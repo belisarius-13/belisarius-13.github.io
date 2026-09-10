@@ -22,6 +22,7 @@ MAX_DOWNLOAD_BYTES = 5 * 1024 * 1024
 RESOURCES = {
     "latest.json": "data/generated/latest.json",
     "changes.json": "data/generated/changes.json",
+    "trends.json": "data/history/trends.json",
     "changes.atom": "feeds/changes.atom",
     "latest.md": "reports/latest.md",
 }
@@ -94,6 +95,7 @@ def parse_json(
 def validate_documents(
     latest_content: bytes,
     changes_content: bytes,
+    trends_content: bytes,
     atom_content: bytes,
     markdown_content: bytes,
 ) -> None:
@@ -109,6 +111,11 @@ def validate_documents(
         name="changes.json",
     )
 
+    trends = parse_json(
+        trends_content,
+        name="trends.json",
+    )
+
     if latest.get("schema_version") != 2:
         raise IntelSyncError(
             "latest.json schema version is not supported"
@@ -117,6 +124,82 @@ def validate_documents(
     if changes.get("schema_version") != 1:
         raise IntelSyncError(
             "changes.json schema version is not supported"
+        )
+
+    if trends.get("schema_version") != 1:
+        raise IntelSyncError(
+            "trends.json schema version is not supported"
+        )
+
+    if (
+        trends.get("priority_model")
+        != latest.get("priority_model")
+    ):
+        raise IntelSyncError(
+            "history priority model does not match publication"
+        )
+
+    points = trends.get("points")
+
+    if not isinstance(points, list) or not points:
+        raise IntelSyncError(
+            "trends.json contains no history points"
+        )
+
+    dates = [
+        point.get("date")
+        for point in points
+    ]
+
+    if dates != sorted(dates):
+        raise IntelSyncError(
+            "history points are not chronological"
+        )
+
+    if len(dates) != len(set(dates)):
+        raise IntelSyncError(
+            "history contains duplicate dates"
+        )
+
+    latest_point = points[-1]
+
+    if (
+        latest_point.get("generated_at")
+        != latest.get("generated_at")
+    ):
+        raise IntelSyncError(
+            "history and current publication timestamps do not match"
+        )
+
+    if (
+        latest_point.get("catalog_version")
+        != latest.get("source_catalog_version")
+    ):
+        raise IntelSyncError(
+            "history and current catalog versions do not match"
+        )
+
+    if (
+        latest_point.get("total")
+        != latest["summary"]["total"]
+    ):
+        raise IntelSyncError(
+            "history and current record totals do not match"
+        )
+
+    priorities = latest_point.get(
+        "priorities",
+        {}
+    )
+
+    if priorities != {
+        "critical": latest["summary"]["critical"],
+        "high": latest["summary"]["high"],
+        "medium": latest["summary"]["medium"],
+        "low": latest["summary"]["low"],
+    }:
+        raise IntelSyncError(
+            "history and current priority totals do not match"
         )
 
     if latest.get("priority_model") != "B13-KEV-v1":
@@ -238,6 +321,7 @@ def main() -> None:
     validate_documents(
         downloaded["latest.json"],
         downloaded["changes.json"],
+        downloaded["trends.json"],
         downloaded["changes.atom"],
         downloaded["latest.md"],
     )
@@ -269,6 +353,11 @@ def main() -> None:
     changes = parse_json(
         downloaded["changes.json"],
         name="changes.json",
+    )
+
+    trends = parse_json(
+        downloaded["trends.json"],
+        name="trends.json",
     )
 
     counts = changes["changes"]["counts"]
@@ -306,6 +395,10 @@ def main() -> None:
     print(
         "Removed:",
         counts["removed"],
+    )
+    print(
+        "History points:",
+        len(trends["points"]),
     )
 
 
