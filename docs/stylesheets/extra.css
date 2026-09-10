@@ -7087,3 +7087,129 @@ body:has(.b13-home) .b13-home {
   font-size: 0.54rem;
   letter-spacing: 0.025em;
 }
+
+/* =========================================================
+   INTEL-01 // THREAT INTELLIGENCE DASHBOARD
+   ========================================================= */
+
+.b13-intel-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.b13-intel-meta span,
+.b13-intel-change-grid > div {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--b13-border);
+  border-radius: 10px;
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.b13-intel-meta span {
+  color: var(--b13-muted);
+  font-family: monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.b13-intel-meta strong {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--b13-text);
+  overflow-wrap: anywhere;
+}
+
+.b13-intel-metrics {
+  margin-bottom: 2.5rem;
+}
+
+.b13-intel-number {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.b13-intel-change-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 2.5rem;
+}
+
+.b13-intel-change-grid span {
+  display: block;
+  color: var(--b13-muted);
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.b13-intel-change-grid strong {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--b13-purple-bright);
+  font-size: 1.4rem;
+}
+
+.b13-intel-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 2rem;
+}
+
+.b13-intel-table-wrap table {
+  display: table;
+  width: 100%;
+  min-width: 0;
+  table-layout: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .b13-intel-table-wrap table {
+    min-width: 700px;
+  }
+
+  .b13-intel-meta,
+  .b13-intel-change-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .b13-intel-meta,
+  .b13-intel-change-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.b13-intel-metrics .b13-card {
+  min-height: 190px;
+}
+
+.b13-intel-metrics .b13-card:nth-child(2) .b13-intel-number {
+  color: #ffffff;
+}
+
+.b13-intel-change-grid > div {
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.b13-intel-change-grid > div:hover {
+  border-color: rgba(167, 139, 250, 0.38);
+  background: rgba(139, 92, 246, 0.09);
+}
+
+.b13-intel-table-wrap th {
+  white-space: nowrap;
+}
+
+.b13-intel-table-wrap td {
+  vertical-align: top;
+}
