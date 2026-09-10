@@ -41,6 +41,7 @@ def main() -> None:
     validate_documents(
         documents["latest.json"],
         documents["changes.json"],
+        documents["trends.json"],
         documents["changes.atom"],
         documents["latest.md"],
     )
@@ -53,6 +54,11 @@ def main() -> None:
     changes = parse_json(
         documents["changes.json"],
         name="changes.json",
+    )
+
+    trends = parse_json(
+        documents["trends.json"],
+        name="trends.json",
     )
 
     counts = changes["changes"]["counts"]
@@ -69,6 +75,10 @@ def main() -> None:
     print("New:", counts["new"])
     print("Changed:", counts["changed"])
     print("Removed:", counts["removed"])
+    print(
+        "History points:",
+        len(trends["points"]),
+    )
 
 
 if __name__ == "__main__":

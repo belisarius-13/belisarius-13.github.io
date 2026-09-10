@@ -68,6 +68,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/intel-dashboard.js
+  - javascripts/intel-trends.js
 
 extra:
   generator: false

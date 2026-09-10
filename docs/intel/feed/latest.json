@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-10T15:20:24.327983Z",
-  "source_catalog_version": "2026.09.09",
+  "generated_at": "2026-09-10T21:38:38.051119Z",
+  "source_catalog_version": "2026.09.10",
   "priority_model": "B13-KEV-v1",
   "sources": [
     "CISA KEV",
     "FIRST EPSS"
   ],
   "summary": {
-    "total": 1703,
+    "total": 1705,
     "critical": 224,
-    "high": 435,
-    "medium": 1044,
+    "high": 436,
+    "medium": 1045,
     "low": 0,
     "published_records": 100
   },
@@ -20,7 +20,7 @@
       "new": 0,
       "changed": 0,
       "removed": 0,
-      "unchanged": 1703
+      "unchanged": 1705
     },
     "new_priority_counts": {
       "critical": 0,

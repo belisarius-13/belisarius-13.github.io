@@ -1,8 +1,8 @@
 # B13 Threat Intelligence Brief
 
-**Generated:** 2026-09-10T15:20:24.327983Z
+**Generated:** 2026-09-10T21:38:38.051119Z
 
-**CISA KEV Catalog:** 2026.09.09
+**CISA KEV Catalog:** 2026.09.10
 
 **Priority Model:** B13-KEV-v1
 
@@ -11,10 +11,10 @@
 | Priority | Count |
 | --- | ---: |
 | CRITICAL | 224 |
-| HIGH | 435 |
-| MEDIUM | 1044 |
+| HIGH | 436 |
+| MEDIUM | 1045 |
 | LOW | 0 |
-| **TOTAL** | **1703** |
+| **TOTAL** | **1705** |
 
 ## What Changed
 
@@ -23,7 +23,7 @@
 | NEW | 0 |
 | CHANGED | 0 |
 | REMOVED | 0 |
-| UNCHANGED | 1703 |
+| UNCHANGED | 1705 |
 
 ### Change Priority Breakdown
 
