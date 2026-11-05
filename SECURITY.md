@@ -2,7 +2,7 @@
 
 ## BELISARIUS13 Security
 
-BELISARIUS13 is a public cybersecurity engineering portfolio and security research lab operated by Joseph Daniel.
+BELISARIUS13 is a public cybersecurity engineering portfolio and security research lab operated by Joseph Daniels.
 
 Security issues affecting the portfolio, its source repository, or its deployment configuration should be reported responsibly.
 
@@ -18,7 +18,7 @@ Security reports may include issues affecting:
 
 ## Reporting a Vulnerability
 
-Please use **GitHub Private Vulnerability Reporting** for security-sensitive findings.
+Please email **josepht.daniels@outlook.com** privately for security-sensitive findings. GitHub Private Vulnerability Reporting can also be used if it is enabled on this repository.
 
 Do not disclose a vulnerability through a public GitHub issue if the report contains:
 

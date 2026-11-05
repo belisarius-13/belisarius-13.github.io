@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://belisarius13.com/sitemap.xml
