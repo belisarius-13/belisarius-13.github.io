@@ -35,7 +35,7 @@ for path,page in parsed.items():
   assert target.exists(), f'{path.name}: broken link {value}'
   if url.fragment and target in parsed: assert url.fragment in parsed[target].ids, f'{path}: missing anchor {value}'
 assert (root/'assets/joseph-taomhera-cv.pdf').read_bytes().startswith(b'%PDF'), 'Missing CV PDF'
-assert 'CONFIRMED BY EMAIL' in (root/'contact.html').read_text()
+assert 'REPLY BY EMAIL' in (root/'contact.html').read_text()
 assert 'PLANNED' in (root/'projects.html').read_text()
 assert (root/'CNAME').read_text().strip()=='belisarius13.com'
 print(f'PASS: {len(parsed)} pages, internal links, anchors, CSP, no inline code, CV, booking disclosure, planned content and domain.')
@@ -48,3 +48,14 @@ assert 'motion-toggle' in home and 'theme-toggle' in home
 assert 'assets/joseph-anime.webp' in home
 assert (root/'assets/joseph-anime.webp').read_bytes()[8:12] == b'WEBP'
 print('PASS: seven focus areas, portrait asset, theme and motion controls.')
+
+# Contact submits to the mail relay without launching an email client.
+contact = (root/'contact.html').read_text()
+assert 'action="https://formsubmit.co/josepht.daniels@outlook.com" method="POST"' in contact
+assert 'type="email" name="email" autocomplete="email" required' in contact
+assert 'name="_honey" hidden' in contact
+assert 'name="_captcha"' not in contact, 'Keep provider CAPTCHA enabled'
+assert "location.href = `mailto:" not in (root/'assets/site.js').read_text()
+for path, page in parsed.items():
+ assert ("form-action https://formsubmit.co;" if path.name == 'contact.html' else "form-action 'none';") in page.csp
+print('PASS: direct POST, required reply address, spam controls, scoped form-action policy.')

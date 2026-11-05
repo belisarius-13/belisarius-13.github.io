@@ -36,15 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const date = form.querySelector('[name=date]');
     const today = new Date();
     date.min = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-      const data = new FormData(form);
-      const subject = `Conversation request: ${data.get('topic')}`;
-      const body = `Hello Joseph,\n\nI would like to arrange a conversation.\n\nName: ${data.get('name')}\nTopic: ${data.get('topic')}\nPreferred date: ${data.get('date')}\nPreferred time and time zone: ${data.get('time')}\n\n${data.get('message')}\n\nPlease let me know whether this works for you.`;
-      location.href = `mailto:josepht.daniels@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      document.querySelector('#booking-status').textContent = 'Your email app should open with a draft. Send it to request a time; your meeting is confirmed only when Joseph replies. If no app opens, email josepht.daniels@outlook.com directly.';
-    });
+
   }
 });
 
