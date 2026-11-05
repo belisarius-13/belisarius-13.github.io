@@ -2,7 +2,7 @@
 
 ## BELISARIUS13 Security
 
-BELISARIUS13 is a public cybersecurity engineering portfolio and security research lab operated by Joseph Taomhera.
+BELISARIUS13 is a public cybersecurity engineering portfolio and security research lab operated by Joseph Daniels.
 
 Security issues affecting the portfolio, its source repository, or its deployment configuration should be reported responsibly.
 

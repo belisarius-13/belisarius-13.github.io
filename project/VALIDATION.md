@@ -16,3 +16,10 @@
 - Desktop: focus selection changes visible heading and description; light/dark switch works; motion toggle changes computed animation state to paused.
 - Booking configuration tested with a temporary example URL locally: CTA and privacy disclosure appear only when configured; unsafe schemes are rejected. Example URL removed before commit.
 - Calendar account and scheduling URL are not connected. No automatic booking or direct server email delivery is claimed.
+
+## Current revision: name, world map, and Calendly
+- Build, internal links, CSP checks, and JavaScript syntax passed.
+- Desktop light and dark themes visually inspected with Joseph Daniels, world map, anime portrait, and public booking CTA.
+- Public active 30-minute Calendly event verified through connector; no test booking made. Previous calendar-not-connected note is superseded for the website link.
+- Existing project/previews images show the prior design revision.
+- Production has not been deployed.

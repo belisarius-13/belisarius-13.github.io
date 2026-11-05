@@ -1,4 +1,4 @@
-# Joseph Taomhera | Belisarius
+# Joseph Daniels | Belisarius
 
 Personal portfolio focused on Azure, Windows security, and Purple Teaming.
 

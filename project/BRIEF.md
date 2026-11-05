@@ -1,9 +1,9 @@
 # Belisarius rebuild brief
 
-Owner: Joseph Taomhera. Approved direction: 5 November 2026.
+Owner: Joseph Daniels. Approved direction: 5 November 2026.
 
 ## Purpose
-International employment, consulting enquiries, technical credibility, and community building. Public name: Joseph Taomhera | Belisarius. Azure first; Windows endpoints, Active Directory, Entra ID/hybrid identity, Defender, hardening, detection engineering. Purple Teaming is the method.
+International employment, consulting enquiries, technical credibility, and community building. Public name: Joseph Daniels | Belisarius. Azure first; Windows endpoints, Active Directory, Entra ID/hybrid identity, Defender, hardening, detection engineering. Purple Teaming is the method.
 
 ## Constraints
 - Existing repository: belisarius-13/belisarius-13.github.io; source remains here.
@@ -38,3 +38,9 @@ Portrait (optional), scheduling URL for real-time appointment booking, confirmat
 - RedShoulder link: https://redshoulder.co.za.
 - Direct calendar booking is pending an owner-authorised calendar connection and scheduling URL. Calendly Free is a candidate: one event type and one calendar connection; Outlook.com is supported. No account is created or subscription purchased.
 - `project/site-settings.json` accepts a verified HTTPS Calendly `booking_url`. Once supplied, rebuilding exposes the calendar-booking CTA and updates the privacy page. Until then, email requests remain explicitly unconfirmed.
+
+## Current revision: name, world map, and booking
+- Display name is Joseph Daniels. Original downloadable CV remains unchanged.
+- Public booking URL verified against the active Calendly event: https://calendly.com/josepht-daniels/30min. Owner reports Outlook.com is connected; calendar delivery has not been tested by making an appointment.
+- Earlier pending-booking and initials notes above are superseded. Anime portrait is installed.
+- Clearly visible red world map with a dark/black backdrop in light mode, red backdrop in dark mode, slow motion, and pause/reduced-motion support replaces the network background.
