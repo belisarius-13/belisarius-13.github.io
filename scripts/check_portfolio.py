@@ -51,11 +51,11 @@ print('PASS: seven focus areas, portrait asset, theme and motion controls.')
 
 # Contact submits to the mail relay without launching an email client.
 contact = (root/'contact.html').read_text()
-assert 'action="https://formsubmit.co/josepht.daniels@outlook.com" method="POST"' in contact
+assert 'action="https://formspree.io/f/xwllzrlp" method="POST"' in contact
 assert 'type="email" name="email" autocomplete="email" required' in contact
-assert 'name="_honey" hidden' in contact
+assert 'name="_honey"' not in contact
 assert 'name="_captcha"' not in contact, 'Keep provider CAPTCHA enabled'
 assert "location.href = `mailto:" not in (root/'assets/site.js').read_text()
 for path, page in parsed.items():
- assert ("form-action https://formsubmit.co;" if path.name == 'contact.html' else "form-action 'none';") in page.csp
+ assert ("form-action https://formspree.io;" if path.name == 'contact.html' else "form-action 'none';") in page.csp
 print('PASS: direct POST, required reply address, spam controls, scoped form-action policy.')
