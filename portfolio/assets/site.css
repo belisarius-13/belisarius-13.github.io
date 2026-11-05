@@ -29,3 +29,7 @@ body{isolation:isolate}.defence-scene{position:fixed;inset:0;z-index:-1;pointer-
 @media(max-width:850px){.world-orbit{left:-150px;right:-200px;top:160px}.world-band-copy{width:37%;padding:22px}.world-band-copy h2{font-size:22px}.world-band-art{left:36%}}
 @media(max-width:600px){.world-band{min-height:290px;align-items:flex-start}.world-band-copy{width:100%;padding:20px}.world-band-copy h2{font-size:21px;margin:6px 0}.world-band-copy h2 br{display:none}.world-band-art{left:0;top:115px;bottom:5px}.world-orbit{opacity:.17}}
 @media(prefers-reduced-motion:reduce){.world-band *{animation:none!important}}
+
+/* Original RedShoulder wordmark on a light surface in both themes. */
+.company-logo{display:flex;align-items:center;justify-content:center;flex:0 0 160px;width:160px;padding:8px;background:#fff;border:1px solid #e5e5e9;border-radius:10px}.company-logo img{display:block;width:100%;height:auto;object-fit:contain}.role-line{flex-wrap:wrap}
+@media(max-width:600px){.company-logo{flex-basis:140px;width:140px}}
