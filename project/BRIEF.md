@@ -30,3 +30,11 @@ Review branch and draft PR first. Existing main workflow publishes automatically
 
 ## Next inputs
 Portrait (optional), scheduling URL for real-time appointment booking, confirmation of current CV/contact details, visual review of the first build.
+
+## Revision: portrait, motion, and scheduling
+- Use Joseph's existing repository portrait as the reference for an anime-style avatar. Generated transparent illustration is stored as an alpha-preserving WebP website asset.
+- Add a translucent defensive-network background, slow decorative motion, a persistent motion toggle, and respect reduced-motion preferences. It does not represent live attack data.
+- Seven explicit areas: Cloud Security; Identity & Access Controls; Windows Security; Detection Engineering; Azure Security; Threat Hunting; Incident Response.
+- RedShoulder link: https://redshoulder.co.za.
+- Direct calendar booking is pending an owner-authorised calendar connection and scheduling URL. Calendly Free is a candidate: one event type and one calendar connection; Outlook.com is supported. No account is created or subscription purchased.
+- `project/site-settings.json` accepts a verified HTTPS Calendly `booking_url`. Once supplied, rebuilding exposes the calendar-booking CTA and updates the privacy page. Until then, email requests remain explicitly unconfirmed.

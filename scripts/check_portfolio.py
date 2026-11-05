@@ -39,3 +39,12 @@ assert 'CONFIRMED BY EMAIL' in (root/'contact.html').read_text()
 assert 'PLANNED' in (root/'projects.html').read_text()
 assert (root/'CNAME').read_text().strip()=='belisarius13.com'
 print(f'PASS: {len(parsed)} pages, internal links, anchors, CSP, no inline code, CV, booking disclosure, planned content and domain.')
+# Required profile coverage and interactive affordances.
+home = (root/'index.html').read_text()
+for name in ['Cloud Security','Identity &amp; Access Controls','Windows Security','Detection Engineering','Azure Security','Threat Hunting','Incident Response']:
+ assert name in home, f'Missing profile area: {name}'
+assert home.count('class="focus-choice"') == 7
+assert 'motion-toggle' in home and 'theme-toggle' in home
+assert 'assets/joseph-anime.webp' in home
+assert (root/'assets/joseph-anime.webp').read_bytes()[8:12] == b'WEBP'
+print('PASS: seven focus areas, portrait asset, theme and motion controls.')

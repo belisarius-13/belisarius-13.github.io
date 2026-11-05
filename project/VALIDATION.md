@@ -9,3 +9,10 @@
 - Responsive CSS included; mobile viewport interaction has not been verified in this environment.
 - Account/edge security settings are not verified. See SECURITY-ARCHITECTURE.md.
 - Production deployment not performed; draft PR is intended for review.
+
+## Portrait and interactive revision
+- Rebuilt all eight pages; link/anchor/CSP checks and JavaScript syntax passed.
+- Seven explicit focus areas and generated WebP portrait verified.
+- Desktop: focus selection changes visible heading and description; light/dark switch works; motion toggle changes computed animation state to paused.
+- Booking configuration tested with a temporary example URL locally: CTA and privacy disclosure appear only when configured; unsafe schemes are rejected. Example URL removed before commit.
+- Calendar account and scheduling URL are not connected. No automatic booking or direct server email delivery is claimed.

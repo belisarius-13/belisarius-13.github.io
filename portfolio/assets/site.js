@@ -47,3 +47,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Decorative motion and focus exploration have no network or tracking dependency.
+document.addEventListener('DOMContentLoaded', () => {
+  const motion = document.querySelector('.motion-toggle');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let pauseChoice;
+  try { pauseChoice = localStorage.getItem('belisarius-motion'); } catch {}
+  const updateMotion = () => {
+    const paused = reduced.matches || pauseChoice === 'paused';
+    root.dataset.motion = paused ? 'paused' : 'running';
+    motion.setAttribute('aria-pressed', String(paused));
+    motion.setAttribute('aria-label', paused ? 'Resume background motion' : 'Pause background motion');
+    motion.querySelector('span').textContent = paused ? 'Motion off' : 'Motion on';
+    motion.disabled = reduced.matches;
+    motion.title = reduced.matches ? 'Motion disabled by your reduced-motion preference' : 'Control decorative background motion';
+  };
+  updateMotion();
+  reduced.addEventListener('change', updateMotion);
+  motion.addEventListener('click', () => {
+    pauseChoice = root.dataset.motion === 'paused' ? 'running' : 'paused';
+    try { localStorage.setItem('belisarius-motion', pauseChoice); } catch {}
+    updateMotion();
+  });
+  const choices = document.querySelectorAll('.focus-choice');
+  const detail = document.querySelector('#focus-detail');
+  choices.forEach(choice => choice.addEventListener('click', () => {
+    choices.forEach(button => button.setAttribute('aria-pressed', String(button === choice)));
+    detail.querySelector('h3').textContent = choice.querySelector('span').textContent;
+    detail.querySelector('p').textContent = choice.dataset.description;
+  }));
+  document.querySelectorAll('.tabs a').forEach(link => link.addEventListener('click', () => {
+    document.querySelectorAll('.tabs a').forEach(item => item.classList.toggle('active', item === link));
+  }));
+});

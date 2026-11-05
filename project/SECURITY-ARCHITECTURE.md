@@ -26,3 +26,6 @@ No public lab endpoint in this release. Future lab accounts/networks must use se
 
 ## Content review
 The attached CV is published unchanged in the review branch. Review public contact details and chronology before deployment. No synthetic research results or audience numbers.
+
+## Interaction revision
+The animated SVG is decorative and local. Focus controls use textContent, not HTML injection. Both preference values are local only. Calendar integration is a validated external HTTPS link rendered only when the owner supplies it. No calendar tokens, direct-send email credentials, or unauthenticated mail relay are placed in public JavaScript. A ChatGPT calendar connection does not itself create a public booking service.
