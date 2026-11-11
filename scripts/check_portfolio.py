@@ -41,13 +41,13 @@ assert (root/'CNAME').read_text().strip()=='belisarius13.com'
 print(f'PASS: {len(parsed)} pages, internal links, anchors, CSP, no inline code, CV, booking disclosure, planned content and domain.')
 # Required profile coverage and interactive affordances.
 home = (root/'index.html').read_text()
-for name in ['Cloud Security','Identity &amp; Access Controls','Windows Security','Detection Engineering','Azure Security','Threat Hunting','Incident Response']:
- assert name in home, f'Missing profile area: {name}'
-assert home.count('class="focus-choice"') == 7
-assert 'motion-toggle' in home and 'theme-toggle' in home
-assert 'assets/joseph-anime.webp' in home
-assert (root/'assets/joseph-anime.webp').read_bytes()[8:12] == b'WEBP'
-print('PASS: seven focus areas, portrait asset, theme and motion controls.')
+for text in ['SOC engineering', 'Microsoft Sentinel', 'Defender XDR', 'Entra ID', 'Field notes', 'purple teaming']:
+ assert text in home, f'Missing homepage content: {text}'
+for image in ['table-mountain.webp', 'joseph-anime.webp']:
+ assert f'assets/{image}' in home and (root/'assets'/image).read_bytes()[8:12] == b'WEBP'
+assert 'aria-label="Toggle dark mode"' in home
+assert 'action="https://formspree.io/f/xwllzrlp" method="POST"' in home
+print('PASS: engineering portfolio, landscape, portrait, theme and homepage form.')
 
 # Contact submits to the mail relay without launching an email client.
 contact = (root/'contact.html').read_text()
@@ -57,5 +57,5 @@ assert 'name="_honey"' not in contact
 assert 'name="_captcha"' not in contact, 'Keep provider CAPTCHA enabled'
 assert "location.href = `mailto:" not in (root/'assets/site.js').read_text()
 for path, page in parsed.items():
- assert ("form-action https://formspree.io;" if path.name == 'contact.html' else "form-action 'none';") in page.csp
+ assert ("form-action https://formspree.io;" if path.name in ('contact.html', 'index.html') else "form-action 'none';") in page.csp
 print('PASS: direct POST, required reply address, spam controls, scoped form-action policy.')
