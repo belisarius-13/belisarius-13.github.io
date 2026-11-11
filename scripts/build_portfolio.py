@@ -88,7 +88,8 @@ if BOOKING_URL:
  privacy=privacy.replace('<h2>Hosting and external links</h2>', '<h2>Calendar bookings</h2><p>The scheduling link takes you to Calendly. Booking details are processed by Calendly and the connected calendar provider under their privacy policies. The calendar is not embedded or loaded while you browse this site.</p><h2>Hosting and external links</h2>')
 pages=[('index.html','Overview',home,'Joseph Daniels | Belisarius. Azure and Windows security, informed by Purple Teaming. Explore my background, planned projects, and professional contact channels.'),('about.html','About me',about,'Meet Joseph Daniels, Co-founder and Head of Operations and Cybersecurity at RedShoulder.'),('projects.html','Projects',project_page,'Explore planned Azure identity, Windows security, and detection engineering lab studies.'),('research.html','Research',research,'Follow the development of original security research across Azure, Windows, and Purple Teaming.'),('contact.html','Connect',contact,'Contact Joseph Daniels for employment, consulting, collaboration, or to request a conversation.'),('privacy.html','Privacy',privacy,'Privacy information for the Belisarius portfolio.'),('security.html','Security',security,'Responsible security reporting for the Belisarius portfolio.')]
 for file,title,body,desc in pages:
- (OUT/file).write_text(shell(file,title,body,desc))
+ if file != "index.html":  # The standalone homepage is maintained in portfolio/index.html.
+  (OUT/file).write_text(shell(file,title,body,desc))
 not_found=heading('404','This page has moved.','Belisarius has a new structure. Explore the profile, projects, or contact page using the navigation.')+link('/','Back to the overview','button')
 # Absolute asset and navigation paths are required for unknown nested URLs.
 html=shell('404.html','Page not found',not_found,'Page not found on Belisarius.')
