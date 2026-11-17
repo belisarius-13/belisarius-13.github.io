@@ -127,6 +127,6 @@ for prefix in ['assets/','index.html','about.html','projects.html','research.htm
  html=html.replace('href="'+prefix, 'href="/'+prefix).replace('src="'+prefix,'src="/'+prefix)
 (OUT/'404.html').write_text(html)
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://belisarius13.com/sitemap.xml\n')
-(OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://belisarius13.com/'+('' if f=='index.html' else f)+'</loc></url>' for f,*_ in [*pages, ('reading.html',)])+'</urlset>')
+(OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://belisarius13.com/'+('' if f=='index.html' else f)+'</loc></url>' for f,*_ in [*pages, ('reading.html',), ('entra-mailbox-investigation.html',)])+'</urlset>')
 (OUT/'CNAME').write_text('belisarius13.com\n')
 print(f'Built {len(pages)+1} static pages in {OUT}')
