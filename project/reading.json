@@ -1,0 +1,23 @@
+{
+  "articles": [
+    [
+      "Cybersecurity skills",
+      "Rohit Tamma · Substack",
+      "https://rohittamma.substack.com/p/the-cybersecurity-skill-you-wont"
+    ],
+    [
+      "Managing Windows 365 security baselines with Intune",
+      "Nerdio · Endpoint management",
+      "https://getnerdio.com/blog/endpoint-security-management/"
+    ],
+    [
+      "How Defender isolated a compromised device at QNET",
+      "Microsoft Security · Incident case study",
+      "https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/"
+    ]
+  ],
+  "books": {
+    "Cybersecurity": [],
+    "General reading": []
+  }
+}

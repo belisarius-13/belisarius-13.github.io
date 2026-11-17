@@ -43,11 +43,11 @@ print(f'PASS: {len(parsed)} pages, internal links, anchors, CSP, no inline code,
 home = (root/'index.html').read_text()
 for text in ['SOC engineering', 'Microsoft Sentinel', 'Defender XDR', 'Entra ID', 'Field notes', 'purple teaming']:
  assert text in home, f'Missing homepage content: {text}'
-for image in ['table-mountain.webp', 'joseph-anime.webp']:
+for image in ['joseph-anime.webp']:
  assert f'assets/{image}' in home and (root/'assets'/image).read_bytes()[8:12] == b'WEBP'
-assert 'aria-label="Toggle dark mode"' in home
+assert 'aria-label="Toggle purple and blue theme"' in home
 assert 'action="https://formspree.io/f/xwllzrlp" method="POST"' in home
-print('PASS: engineering portfolio, landscape, portrait, theme and homepage form.')
+print('PASS: engineering portfolio, portrait, theme and homepage form.')
 
 # Contact submits to the mail relay without launching an email client.
 contact = (root/'contact.html').read_text()
