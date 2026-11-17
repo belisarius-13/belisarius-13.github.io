@@ -13,3 +13,11 @@ body.dark{--bg:#1e2345;--ink:#faf7ff;--line:#66688e;--muted:#d3d6ee;--red:#eab5f
 .reading-links a span{color:var(--muted);font-size:14px}
 nav [aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
 @media(max-width:720px){.profile-art img{width:min(55%,190px)}nav{gap:12px}}
+
+.field-note article{max-width:730px;margin:48px auto 64px}
+.field-note h1{font-size:clamp(42px,6vw,78px);line-height:1.04}
+.field-note h2{font-size:clamp(25px,3vw,36px);margin:36px 0 12px}
+.field-note p{max-width:none;margin:14px 0;line-height:1.65}
+.field-note a{text-decoration:underline;text-underline-offset:3px}
+.field-note code{overflow-wrap:anywhere}
+.article-link{display:inline-block;margin-top:12px}
