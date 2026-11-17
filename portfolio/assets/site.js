@@ -31,13 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeMenu(); menu.focus(); } });
   document.addEventListener('click', event => { if (!sidebar.contains(event.target) && !menu.contains(event.target)) closeMenu(); });
   matchMedia('(min-width: 851px)').addEventListener('change', closeMenu);
-  const form = document.querySelector('#conversation-form');
-  if (form) {
-    const date = form.querySelector('[name=date]');
-    const today = new Date();
-    date.min = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
 
-  }
 });
 
 // Decorative motion and focus exploration have no network or tracking dependency.
