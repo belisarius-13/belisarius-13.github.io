@@ -20,4 +20,61 @@ nav [aria-current="page"]{text-decoration:underline;text-underline-offset:4px}
 .field-note p{max-width:none;margin:14px 0;line-height:1.65}
 .field-note a{text-decoration:underline;text-underline-offset:3px}
 .field-note code{overflow-wrap:anywhere}
-.article-link{display:inline-block;margin-top:12px}
+.notes-panel {
+  margin-block: 30px;
+  padding: clamp(24px, 4vw, 54px);
+  border: 0;
+  border-radius: 22px;
+  background: radial-gradient(ellipse at 80% 18%, #f4cadd, transparent 65%),
+              linear-gradient(125deg, #eee4f4, #e7f1ef);
+}
+.dark .notes-panel {
+  background: radial-gradient(ellipse at 80% 18%, #523758, transparent 65%),
+              linear-gradient(125deg, #33314d, #243c4e);
+}
+.notes-panel h2 { margin: 0 0 10px; }
+.notes-intro { margin-bottom: clamp(22px, 3vw, 38px); }
+.note-feature {
+  display: grid;
+  grid-template-columns: clamp(112px, 15vw, 180px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 3vw, 42px);
+  padding: clamp(18px, 3vw, 36px);
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 18px;
+  background: rgba(255,255,255,.49);
+  box-shadow: 0 12px 32px rgba(48,34,70,.08);
+}
+.dark .note-feature { background: #2a2942; border-color: #696078; }
+.note-cover {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 11%;
+  border-radius: 2px 6px 6px 2px;
+  color: #fdf7ff;
+  background: linear-gradient(145deg, #291e48, #52396f 60%, #314e65);
+  box-shadow: inset 4px 0 0 #ad98bf, 2px 5px 10px #23193424;
+}
+.cover-title { font-weight: 700; font-size: clamp(13px, 1.55vw, 21px); line-height: 1.12; letter-spacing: -.04em; }
+.cover-imprint,.cover-author { font: 10px/1.3 monospace; }
+.cover-envelope {
+  width: 62%;
+  aspect-ratio: 1.55;
+  border: 2px solid #dfcbea;
+  border-radius: 3px;
+  background: linear-gradient(32deg,transparent 48%,#dfcbea 49% 52%,transparent 53%) left top / 50% 65% no-repeat,
+              linear-gradient(-32deg,transparent 48%,#dfcbea 49% 52%,transparent 53%) right top / 50% 65% no-repeat;
+}
+.note-copy { display: grid; justify-items: start; gap: 14px; }
+.note-copy h3 { margin: 0; max-width: 24ch; font-size: clamp(23px, 3vw, 38px); }
+.note-read { display: inline-flex; align-items: center; gap: .65em; min-height: 44px; color: #59277b; font-weight: 700; }
+.dark .note-read { color: #eed1ff; }
+@media (max-width: 600px) {
+  .note-feature { grid-template-columns: minmax(0,1fr); align-items: start; }
+  .note-cover { width: 112px; padding: 12px; }
+}
