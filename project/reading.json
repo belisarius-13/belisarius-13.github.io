@@ -17,7 +17,13 @@
     ]
   ],
   "books": {
-    "Cybersecurity": [],
+    "Cybersecurity": [
+      [
+        "Threat-Driven Software Development: Defending online services from modern threat actors",
+        "Recommended reading · Michael Howard, Lee Holmes, Sherrod DeGrippo and Shawn Hernan · Microsoft Press · Print and eBook",
+        "https://www.microsoftpressstore.com/store/threat-driven-software-development-defending-online-9780135567388"
+      ]
+    ],
     "General reading": []
   }
 }
