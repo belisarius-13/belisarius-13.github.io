@@ -23,7 +23,7 @@ parsed={}
 for path in root.glob('*.html'):
  p=Page(); p.feed(path.read_text()); parsed[path.resolve()]=p
  assert p.h1==1, f'{path}: expected one h1'
- assert p.csp and "default-src 'none'" in p.csp and "connect-src 'none'" in p.csp, f'{path}: missing CSP'
+ assert p.csp and "default-src 'none'" in p.csp, f'{path}: missing CSP'
 for path,page in parsed.items():
  for value in page.links:
   url=urlsplit(value)
@@ -57,5 +57,18 @@ assert 'name="_honey"' not in contact
 assert 'name="_captcha"' not in contact, 'Keep provider CAPTCHA enabled'
 assert "location.href = `mailto:" not in (root/'assets/site.js').read_text()
 for path, page in parsed.items():
- assert ("form-action https://formspree.io;" if path.name in ('contact.html', 'index.html') else "form-action 'none';") in page.csp
-print('PASS: direct POST, required reply address, spam controls, scoped form-action policy.')
+ assert "form-action 'none';" in page.csp
+ assert ("connect-src https://formspree.io/f/xwllzrlp;" if path.name in ('contact.html', 'index.html') else "connect-src 'none';") in page.csp
+ if path.name in ('contact.html', 'index.html'):
+  source = path.read_text()
+  assert 'name="date"' not in source and 'name="time"' not in source
+  assert 'assets/contact.js?v=1' in source
+print('PASS: asynchronous contact, required reply address, blocked navigation and scoped connection policy.')
+
+# Only reviewed static files belong in the public deployment artifact.
+allowed_suffixes = {'.html', '.css', '.js', '.svg', '.png', '.webp', '.jpg', '.jpeg', '.ico', '.pdf', '.txt', '.xml'}
+for asset in root.rglob('*'):
+ if asset.is_file():
+  assert asset.name == 'CNAME' or asset.suffix.lower() in allowed_suffixes, f'Unexpected public file: {asset.relative_to(root)}'
+  assert not any(part.startswith('.') for part in asset.relative_to(root).parts if part != '.well-known'), f'Hidden file in deployment: {asset.relative_to(root)}'
+print('PASS: public artifact contains only expected static file types.')
