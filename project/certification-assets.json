@@ -1,0 +1,11 @@
+{
+  "note": "Earned certifications supplied by site owner. Links describe certification programs, not personal verification. Microsoft artwork denotes level; CSA uses issuer program artwork. Upcoming qualifications have no earned badges. Artwork stored unchanged locally.",
+  "sources": {
+    "microsoft-expert.svg": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+    "microsoft-associate.svg": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "microsoft-fundamentals.svg": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
+    "security-plus.png": "https://images.credly.com/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
+    "crteamer.webp": "https://pentestingexams.com/wp-content/uploads/2023/10/cert-stamp-crteamer.webp",
+    "csa.webp": "https://cdn.eccouncil.org/wp-content/uploads/2026/10/09112734/CSA-Image.webp"
+  }
+}
